@@ -1,0 +1,1 @@
+# Portfolio Update Task - Add Profession Subtitle to Header&#10;&#10;## Steps:&#10;1. [x] Create TODO.md and plan breakdown&#10;2. [ ] Edit index.html to add profession text below h1&#10;3. [ ] Verify and complete task&#10;
