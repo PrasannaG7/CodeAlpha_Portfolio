@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prasanna G - Resume</title>
+    <title>PrasannaG7</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,10 +13,11 @@
             <div class="nav-content">
                 <span class="nav-title">Prasanna G</span>
                 <ul class="nav-links">
-                    <li><a href="#summary">Summary</a></li>
+                    <li><a href="#summary">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#internships">Internships</a></li>
                     <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#achievements">Achievements</a></li>
                 </ul>
@@ -31,14 +32,44 @@
             <div class="header-content">
                 <div class="header-text">
 <h1>Prasanna G</h1>
-                    <p class="profession">Full stack developer / AI&ML enthusiast / Software developer</p><br>
-                    <p class="location">Chengalpattu, Tamil Nadu</p>
+                                        <p class="profession"><span id="typed"></span><span id="cursor">|</span></p>
+                                        <style>
+                                            #typed { font-size: 1.25rem; color: rgb(111, 0, 0) font-weight: 600; transition: color .12s ease; }
+                                            #typed:hover { color: rgb(55, 98, 145); cursor: pointer; }
+                                            #cursor { color: #1e00ff; margin-left: 6px; font-weight: 600; }
+                                            @media (min-width: 768px) { #typed { font-size: 1.6rem; } }
+                                        </style>
+                                        <script>
+                                        (function(){
+                                            const text = "Full stack developer / AI&ML enthusiast / Software developer";
+                                            const el = document.getElementById('typed');
+                                            const cursor = document.getElementById('cursor');
+                                            let i = 0;
+                                            function type(){
+                                                if(i <= text.length){
+                                                    el.textContent = text.slice(0, i);
+                                                    i++;
+                                                    setTimeout(type, 60);
+                                                } else {
+                                                    let blink = 0;
+                                                    const b = setInterval(()=>{
+                                                        cursor.style.visibility = (cursor.style.visibility === 'hidden') ? 'visible' : 'hidden';
+                                                        blink++;
+                                                        if(blink > 6){ clearInterval(b); cursor.style.visibility = 'hidden'; }
+                                                    }, 250);
+                                                }
+                                            }
+                                            if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', type);
+                                            else type();
+                                        })();
+                                        </script>
+                    <br><p class="location">Chennai , Tamil Nadu</p>
                     <div class="contact-info">
                         <div class="contact-item">
-                            <strong>Phone:</strong> <a href="tel:+917845769645">+91-7845769645</a>
+                            <strong>Email:</strong> <a href="mailto:prasannagovind7@gmail.com">prasannagovind7@gmail.com</a>
                         </div>
                         <div class="contact-item">
-                            <strong>Email:</strong> <a href="mailto:kalamprasanna7@gmail.com">kalamprasanna7@gmail.com</a>
+                            <strong>Linkedin:</strong> <a href="https://www.linkedin.com/in/prasannag7/">Prasanna G</a>
                         </div>
                         <div class="contact-item">
                             <strong>Github:</strong> <a href="https://github.com/PrasannaG7">PrasannaG7</a>
@@ -60,12 +91,12 @@
     <!-- Main Content -->
     <main class="main-content">
 
-        <!-- Professional Summary (Full Width) -->
+        <!-- Professional Summary -->
         <section id="summary" class="section summary-section">
             <div class="summary-wrapper">
-                <h2 class="section-title">Professional Summary</h2>
+                <h2 class="section-title">About</h2>
                 <p class="summary-text">
-                    Hi there I am Prasanna.G and I am a persistent 3rd year B.Tech IT student in Agni College of Technology. I am highly inspired with a strong passion in technology and i aspire to be a professional Full Stack Developer in the nearest future with focus of creating the best application that is easier to use.
+                    Hi there I am Prasanna.G and I am a persistent Final year B.Tech IT student in Agni College of Technology. I am highly inspired with a strong passion in technology and i aspire to be a professional Full Stack Developer in the nearest future with focus of creating the best application that is easier to use.
  Knowing enough in such programming languages as Python and C, I do not cease my self-development in this sphere, taking part in numerous practical tasks and studies individually and in cooperation with colleagues. 
  This is why I am looking for internships in IT organizations where I can contribute the skills I acquired alongside learning new tricks fro the field. Therefore, I am most effective in settings characterized by a significant amount of change and learning and look forward to discovering like-minded colleagues in the technology field.
                 </p>
@@ -302,6 +333,16 @@
                     </div>
                 </div>
             </section>
+             
+             <!-- Internships -->
+             <section id="internships" class="section">
+                <h2 class="section-title">Internships</h2>
+                <ul class="internships-list">
+                    <li>AI Web developer Intern at InAmigos Foundation   - (June 2026 – July 2026)</li>
+                    <li>Frontend developer Intern at CodeAlpha     - (June 2026 – July 2026)</li>
+                    <li>Python developer Intern at Megsyra solutions -  (June 2026 – July 2026)</li>
+                </ul>
+                </section>
 
             <!-- Certifications -->
             <section id="certifications" class="section">
@@ -324,12 +365,6 @@
                     <li>Outstanding Achiever Award</li>
                 </ul>
             </section>
-
-            <!-- Declaration -->
-            <section class="section declaration">
-                <p>I declare that the information is true.</p>
-            </section>
-
         </div>
     </main>
 
